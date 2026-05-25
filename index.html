@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1300 FIT TEST</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#031c34;
+      --navy2:#06223d;
+      --yellow:#eef400;
+      --white:#ffffff;
+      --muted:#d8e0e8;
+      --line:rgba(238,244,0,.55);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,Arial,sans-serif;background:#f6f7f8;color:#071528}
+    a{text-decoration:none;color:inherit}
+    .page{max-width:1500px;margin:auto;background:#fff;box-shadow:0 8px 40px rgba(0,0,0,.18)}
+    .hero{background:linear-gradient(90deg,rgba(3,28,52,.99) 0%,rgba(3,28,52,.95) 42%,rgba(3,28,52,.35) 68%,rgba(3,28,52,.1) 100%),url('142E22B1-CDCD-444D-BD8F-593BC52CA7CD.jpeg');background-size:cover;background-position:center top;color:#fff;min-height:780px;position:relative;overflow:hidden}
+    header{height:135px;display:flex;align-items:flex-start;gap:55px;padding:28px 34px 0 30px}
+    .logo{width:146px;height:146px;border:7px solid var(--yellow);border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;line-height:.88;font-size:39px;letter-spacing:-1.5px;background:rgba(3,28,52,.8)}
+    nav{display:flex;align-items:center;gap:40px;padding-top:35px;font-weight:800;font-size:14px}
+    nav .active{color:var(--yellow);position:relative}
+    nav .active:after{content:"";position:absolute;left:0;bottom:-22px;width:52px;height:5px;background:var(--yellow);border-radius:9px}
+    .top-call{margin-left:auto;margin-top:18px;background:var(--yellow);color:#081426;border-radius:10px;font-weight:900;font-size:24px;padding:22px 34px;display:flex;gap:14px;align-items:center;box-shadow:0 4px 0 rgba(0,0,0,.18)}
+    .hero-content{padding:80px 0 0 86px;max-width:650px}
+    .headline{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:79px;line-height:.99;letter-spacing:1px;text-shadow:0 3px 0 rgba(0,0,0,.3)}
+    .headline span{color:var(--yellow)}
+    .sub{font-size:28px;line-height:1.15;font-weight:900;margin:26px 0 12px}
+    .copy{font-size:19px;line-height:1.55;color:#fff;max-width:580px}
+    .buttons{display:flex;gap:18px;margin:28px 0 46px}
+    .btn{height:68px;padding:0 30px;border-radius:8px;display:flex;align-items:center;gap:14px;font-weight:900;font-size:17px;border:2px solid var(--yellow)}
+    .btn.primary{background:var(--yellow);color:#081426}.btn.secondary{color:#fff;background:rgba(3,28,52,.6)}
+    .badges{display:flex;gap:48px;margin-top:8px}
+    .badge{display:grid;grid-template-columns:48px auto;gap:13px;align-items:center;font-size:13px;font-weight:800}.badge small{display:block;font-size:14px;font-weight:400;margin-top:7px;color:#fff}
+    .icon{font-size:42px;color:var(--yellow)}
+    .safety{position:absolute;right:0;bottom:0;background:var(--yellow);color:#061426;clip-path:polygon(11% 0,100% 0,100% 100%,0 100%);padding:35px 60px 31px 105px;font-weight:900;font-size:22px;display:flex;gap:20px;align-items:center}
+    .features{background:var(--navy);border-top:2px solid var(--yellow);display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:54px 80px;color:#fff}
+    .feature{display:flex;gap:22px;align-items:flex-start;padding:0 34px;border-right:1px solid rgba(255,255,255,.35)}.feature:last-child{border-right:0}.feature h3{font-size:15px;margin-bottom:9px}.feature p{font-size:15px;line-height:1.5;color:#fff}.feature .icon{font-size:48px}
+    .services{padding:42px 88px 24px;background:#f7f7f7}.kicker{color:#b8c500;font-weight:900;font-size:14px;margin-bottom:10px}.section-head{display:flex;justify-content:space-between;align-items:flex-start}.section-head h2{font-size:41px;line-height:1;font-weight:900;margin-bottom:12px}.section-head p{font-size:18px;line-height:1.45;max-width:610px}.outline{border:2px solid #dce300;border-radius:7px;background:#fff;padding:20px 28px;font-weight:900;display:flex;gap:28px;align-items:center;margin-top:55px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:28px}.card{background:#fff;border:1px solid #e1e3e6;border-radius:4px;min-height:275px;padding:42px 30px;box-shadow:0 2px 12px rgba(0,0,0,.03)}.circle{width:86px;height:86px;border-radius:50%;background:#fbfbef;margin:0 auto 35px;display:flex;align-items:center;justify-content:center;color:var(--yellow);font-size:42px}.card h3{font-size:19px;margin-bottom:16px}.card p{font-size:16px;line-height:1.55;margin-bottom:22px}.learn{color:#c7cf00;font-weight:900;font-size:14px}
+    .rep{background:var(--navy);color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;padding:42px 92px 0}.rep h2{font-family:Anton,Impact,sans-serif;font-size:48px;line-height:1.06;letter-spacing:1px}.rep h2 span{color:var(--yellow)}.rep p{font-size:18px;line-height:1.55;max-width:680px;margin:20px 0 35px}.logos{display:flex;gap:34px;align-items:end;color:#fff;font-weight:900;font-size:24px;opacity:.96}.book-box{border:3px solid var(--yellow);border-radius:10px;padding:28px 32px;margin-bottom:9px}.book-title{display:grid;grid-template-columns:80px auto;gap:25px;align-items:center;font-size:36px;line-height:1.02;font-weight:900}.ticks{margin:24px 0;display:grid;gap:12px;font-size:18px}.ticks div:before{content:'✓';background:var(--yellow);color:#061426;border-radius:50%;display:inline-flex;width:25px;height:25px;align-items:center;justify-content:center;margin-right:13px;font-weight:900}.book-btn{background:var(--yellow);color:#061426;border-radius:7px;display:flex;justify-content:space-between;align-items:center;padding:20px 27px;font-size:23px;font-weight:900}.footerbar{background:var(--yellow);color:#061426;display:grid;grid-template-columns:1fr 1.25fr 1fr;align-items:center;text-align:center;font-weight:900;font-size:21px;padding:20px 70px}.footerbar div{border-right:1px solid rgba(3,28,52,.35)}.footerbar div:last-child{border-right:0}
+    @media(max-width:900px){.hero{background:var(--navy);min-height:auto}.hero-content{padding:35px 25px}.headline{font-size:52px}header{height:auto;flex-wrap:wrap}.top-call{margin-left:0}.features,.cards,.rep,.footerbar{grid-template-columns:1fr}.feature{border-right:0;border-bottom:1px solid rgba(255,255,255,.3);padding:24px 0}.services,.rep,.features{padding-left:25px;padding-right:25px}.safety{position:relative;clip-path:none;margin-top:35px}.section-head{display:block}nav{display:none}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <header>
+        <div class="logo">1300<br>FIT<br>TEST</div>
+        <nav><a class="active">HOME</a><a>ABOUT US</a><a>SERVICES⌄</a><a>WHY FIT TEST</a><a>INDUSTRIES</a><a>FAQS</a><a>CONTACT</a></nav>
+        <a class="top-call">☎ 1300 348 837</a>
+      </header>
+      <div class="hero-content">
+        <h1 class="headline">IF IT DOESN’T<br>FIT, IT DOESN’T<br><span>PROTECT.</span></h1>
+        <div class="sub">Respirator Fit Testing – Mandatory.<br>Compliant. Certified.</div>
+        <p class="copy">On-site fit testing across NSW for construction, healthcare, mining and industrial workplaces.</p>
+        <div class="buttons"><a class="btn primary">▣ BOOK ON-SITE NOW</a><a class="btn secondary">☎ CALL 1300 348 837</a></div>
+        <div class="badges">
+          <div class="badge"><div class="icon">♢</div><div>COMPLIANT<small>AS/NZS 1715:2009</small></div></div>
+          <div class="badge"><div class="icon">◴</div><div>FAST & EFFICIENT<small>On-site in 24 – 48hrs</small></div></div>
+          <div class="badge"><div class="icon">▤</div><div>CERTIFIED<small>Nationally Accredited</small></div></div>
+        </div>
+      </div>
+      <div class="safety">⚠ <div>WORK SAFELY.<br>BREATHE SAFELY.</div></div>
+    </section>
+
+    <section class="features">
+      <div class="feature"><div class="icon">▥</div><div><h3>WE COME TO YOU</h3><p>Mobile testing across Sydney & NSW</p></div></div>
+      <div class="feature"><div class="icon">♙</div><div><h3>ALL MAKES & MODELS</h3><p>We test all respirator types and brands</p></div></div>
+      <div class="feature"><div class="icon">☷</div><div><h3>SAME DAY RESULTS</h3><p>Fast, reliable results you can count on</p></div></div>
+      <div class="feature"><div class="icon">◇</div><div><h3>FULLY ACCREDITED</h3><p>Accredited & compliant fit testing you can trust</p></div></div>
+    </section>
+
+    <section class="services">
+      <div class="section-head">
+        <div><div class="kicker">OUR SERVICES</div><h2>Fit Testing Made Simple</h2><p>We make compliance easy with professional on-site fit testing that keeps your team safe and your site compliant.</p></div>
+        <a class="outline">VIEW ALL SERVICES →</a>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="circle">⛑</div><h3>Construction Sites</h3><p>Keep your crew compliant and protected on-site.</p><a class="learn">LEARN MORE →</a></div>
+        <div class="card"><div class="circle">✚</div><h3>Healthcare</h3><p>Protect your staff and meet healthcare standards.</p><a class="learn">LEARN MORE →</a></div>
+        <div class="card"><div class="circle">▟</div><h3>Industrial & Manufacturing</h3><p>Ensure workplace safety and regulatory compliance.</p><a class="learn">LEARN MORE →</a></div>
+        <div class="card"><div class="circle">⚒</div><h3>Mining & Resources</h3><p>On-site testing for high-risk environments.</p><a class="learn">LEARN MORE →</a></div>
+      </div>
+    </section>
+
+    <section class="rep">
+      <div><div class="kicker">TRUSTED ACROSS NSW</div><h2>OUR REPUTATION<br><span>IS YOUR ASSURANCE</span></h2><p>We work with leading companies across a range of industries to deliver reliable, professional and compliant fit testing services, every time.</p><div class="logos"><span>mirvac</span><span>lendlease</span><span>NSW<br>GOVERNMENT</span><span>JOHN<br>HOLLAND</span><span>CPB</span></div></div>
+      <div class="book-box"><div class="book-title"><div class="icon">▣</div><div>BOOK YOUR<br>ON-SITE FIT TEST<br>TODAY</div></div><div class="ticks"><div>On-site across NSW</div><div>Fast turnaround</div><div>Accredited & compliant</div></div><a class="book-btn">BOOK NOW <span>→</span></a></div>
+    </section>
+    <section class="footerbar"><div>☎ 1300 348 837</div><div>✉ info@1300fittest.com.au</div><div>📍 Servicing all of NSW</div></section>
+  </main>
+</body>
+</html>
